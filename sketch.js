@@ -4,9 +4,9 @@ function setup() {
 
 function draw() {
   background(255)
-  for (var i=0; i<width; i+=20){
-    for (var j=0; j<height; j+=20){
-      new ballStick(i,j,10)
+  for (var x=0; x<width; x+=20){
+    for (var y=0; y<height; y+=20){
+      new ballStick(x,y,howFar(x,y))
     }
   }
 }
@@ -19,3 +19,11 @@ var ballStick = function(x,y,ellipseSize){
   line(x,y,mouseX,mouseY)
   ellipse(x,y,ellipseSize, ellipseSize)
 }
+
+function howFar (p1,p2){
+  //var result;
+  //Math.pow(p1) + Math.pow(p2)
+  return dist(p1,p2,mouseX,mouseY)
+}
+
+console.log(howFar(20,20))
