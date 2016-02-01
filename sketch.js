@@ -17,10 +17,9 @@ function draw() {
   circum=600-mouseX
   circle(600-mouseX,300)
 
-  print(mouseX-(600-mouseX))
   fill(0,0,0)
   rect(200,292,100,35)
   fill(255,255,255)
   textSize(18)
-  text(print,220,300,50,20)
+  text((mouseX-(600-mouseX)).toString(),220,300,50,20)
 }
